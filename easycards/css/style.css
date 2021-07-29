@@ -1,0 +1,359 @@
+:root {
+    /* fonts */
+    --Nunito: 'Nunito', cursive;
+    --Poppins: 'Poppins', cursive;
+    --Roboto: 'Roboto', cursive;
+    /* Color Scheme */
+    --black: #212529;
+    --white: #F8F9FA;
+    --grey: #ADB5BD;
+    /* 00b4d8 */
+    --blue-light: #00b4d8;
+    --red-light: #f72585;
+    --red-dark: #b4195f;
+    --blue-dark: #023e8a;
+    --green-light: #3acf5d;
+    --bg-color-dark-1: #212529;
+    --bg-color-dark-2: #343A40;
+    --bg-color-dark-3: #495057;
+    --bg-color-light-1: #F8F9FA;
+    --bg-color-light-2: #E9ECEF;
+    --bg-color-light-3: #DEE2E6;
+    --border-radius: 5px;
+}
+
+* {
+    font-family: var(--Poppins);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--white);
+}
+
+section {
+    font-size: 18px;
+    color: var(--white);
+    height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+    background-color: var(--bg-color-dark-2);
+}
+
+.inline {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn.inline {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.a {
+    margin-left: 10px;
+}
+
+/************ Navbar ************/
+
+nav {
+    background-color: var(--bg-color-dark-1);
+    padding: 1em;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img {
+    height: 18px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+nav .mobile-bar {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5em 1em;
+}
+
+nav .mobile-bar:hover {
+    background-color: var(--bg-color-dark-2);
+}
+
+nav .mobile-bar span {
+    display: block;
+    height: 2px;
+    width: 20px;
+    margin: 2px;
+    background-color: var(--white);
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--white);
+    padding: 0.5em, 1em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+a:hover {
+    color: var(--blue-light);
+}
+
+section {
+    width: 100%;
+    background-color: var(--bg-color-dark-2);
+    display: grid;
+    height: 100vh;
+    position: relative;
+    place-items: center;
+}
+
+.form {
+    padding: 50px 60px;
+    background-color: var(--bg-color-dark-3);
+    border-radius: var(--border-radius);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.form input {
+    background-color: var(--bg-color-dark-2);
+    border: 1px solid var(--bg-color-dark-1);
+    color: var(--white);
+    height: 100%;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    outline: none;
+    transition: border .2s;
+    border-radius: var(--border-radius);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form input.btn {
+    cursor: pointer;
+    border: none;
+    background-color: var(--blue-light);
+    transition: background-color .2s;
+}
+
+.form input.btn:hover {
+    background-color: var(--blue-dark);
+}
+
+.form input:hover {
+    border-color: var(--blue-light);
+}
+
+.form h4 {
+    text-align: left;
+    margin-top: 10px;
+}
+
+/************ Navbar ************/
+
+/**************Intro**************/
+
+.intro-text {
+    margin-top: 50px;
+    font-size: 2em;
+}
+
+#title-text {
+    color: var(--blue-light);
+}
+
+/**************Intro**************/
+
+/************* Main *************/
+
+.overlay-background {
+    /* z-index: -1; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main {
+    background-color: var(--bg-color-dark-2);
+    min-height: 100vh;
+    padding: 25px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    padding: 0;
+}
+
+.title {
+    background-color: var(--bg-color-dark-3);
+    color: var(--white);
+    text-align: center;
+    padding: 2px 0;
+}
+
+.card {
+    width: 250px;
+    height: 280px;
+    border-radius: 7px;
+    background-color: var(--bg-color-dark-1);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border-color: var(--blue-light);
+    transition: background-color .5s;
+}
+
+.card .pic {
+    width: 250px;
+    height: 250px;
+}
+
+.card .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card h4 {
+    margin: auto;
+    text-align: center;
+}
+
+.card-btn {
+    border-radius: 7px;
+    border: none;
+    margin: 20px;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0);
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color .5s;
+}
+
+.overlay i {
+    font-size: 10em;
+    color: #f8f9fa00;
+    transition: color .5s;
+}
+
+.overlay:hover {
+    background-color: rgb(0, 0, 0, .5);
+}
+
+.card:hover {
+    border-color: var(--blue-light);
+}
+
+.overlay:hover i {
+    display: block;
+    color: var(--white);
+}
+
+#add i {
+    color: var(--white);
+}
+
+#add .card:hover {
+    background-color: var(--blue-light);
+}
+
+.pop_up {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 1000;
+}
+
+.active {
+    display: block;
+}
+
+.pop_up .form {
+    position: relative;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon-btn i {
+    transition: color .2s;
+}
+
+.icon-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-right: 15px;
+}
+
+.icon-btn:hover i {
+    color: var(--blue-light);
+}
+
+.pop_up .form .close-btn {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.pop_up .form .close-btn i {
+    font-size: 3em;
+}
+
+.invisible {
+    display: none;
+}
+
+/************* Main *************/
+
+.form input.btn.delete {
+    background-color: var(--red-light);
+}
+
+.form input.btn.delete:hover {
+    background-color: var(--red-dark);
+}

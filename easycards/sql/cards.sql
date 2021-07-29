@@ -1,0 +1,1 @@
+CREATE TABLE `easycards`.`cards` ( `id` INT(11) NOT NULL , `picture` VARCHAR(255) NOT NULL , `title` VARCHAR(255) NOT NULL , `board_id` INT(11) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
